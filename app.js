@@ -23,7 +23,7 @@ app.use(express.static(__dirname + '/assets'));
 app.use(require('./controllers'));
 
 //La aplicación comienza a servir peticiones en el puerto siguiente
-var port = 80;
+var port = process.env.PORT || 3000;
 app.listen(port, function() {
   console.log('Listening on port '+port+'...')
 });
