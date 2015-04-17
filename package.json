@@ -1,0 +1,15 @@
+{
+  "name": "HumiWebsite",
+  "version": "0.0.1",
+  "description": "Humi Taek Won Do Website",
+  "main": "app.js",
+  "dependencies":{
+  		"express":"*",
+  		"mongoose":"*",
+  		"ejs":"*",
+      "body-parser":"*",
+      "morgan":"*"
+  	},
+  "author": "Paulina Noriega",
+  "license": "ISC"
+}

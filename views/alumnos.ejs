@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+        rel="stylesheet" type="text/css">
+        <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
+        rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">HUMI Taekwondo</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a data-target="#modalLogin" data-toggle="modal">Dojo in</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="section" style="background-color: black;">
+            <div class="container">
+                <div class="row">
+                    <small></small>
+                </div>
+                <small></small>
+            </div>
+            <small></small>
+        </div>
+        <div class="section">
+			<div class="container">
+            	<% for(var i=0; i<alumnos.length; i++) {%>
+
+	                    <div class="col-md-3">
+	                        <img src="<%=alumnos[i].foto%>"
+	                        class="img-circle img-responsive">
+	                        <div class="row">
+	                            <div class="col-md-3">
+	                                <h3><%=alumnos[i].nombre%> <%alumnos[i].apellido %></h3>
+	                                <div class="row">
+	                                    <div class="col-md-3"></div>
+	                                    <div class="col-md-3">
+	                                        <h4><%=alumnos[i].grado.nombre%></h4>
+	                                        <i class="fa fa-2x fa-fw fa-genderless text-danger"></i>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+
+            	<% } %>
+ 			</div>
+        </div>
+        <div class="section" style="background-color: black;">
+            <div class="container">
+                <div class="row">
+                    <small></small>
+                </div>
+                <small></small>
+            </div>
+            <small></small>
+        </div>
+        <small>
+            <footer class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-12">
+                            <h1>Ubicación</h1>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img class="img-responsive" src="http://maps.googleapis.com/maps/api/staticmap?center=31.8707056,-116.6372022&amp;zoom=15&amp;size=200x200&amp;sensor=false&amp;
+
+&amp;markers=color:blue|31.8707056,-116.6372022">
+                                </div>
+                                <div class="col-md-3">
+                                    <h4>Dirección</h4>
+                                    <p>Calle Niza #396</p>
+                                    <p>Ampliación Moderna,</p>
+                                    <p>Ensenada B.C., 22879.</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <h4 class="text-left">Teléfono</h4>
+                                    <p class="text-left">(646) 109 3879</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <h4 class="text-left">Redes Sociales</h4>
+                                    <div class="col-md-12 text-left">
+                                        <a href="https://instagram.com/humitkd/"><i class="fa fa-2x fa-fw fa-instagram pull-left text-warning"></i></a>
+                                        <a href="mailto:humi.tkd@gmail.com"><i class="-o fa fa-2x fa-envelope fa-fw hub pull-left text-success"></i></a>
+                                        <a href="https://www.facebook.com/pages/HUMI/343999955723462"><i class="fa fa-2x fa-facebook fa-fw pull-left text-primary"></i></a>
+                                        <a href="#"><i class="-o fa fa-2x fa-calendar fa-fw hub pull-left text-danger"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </small>
+    </body>
+
+</html>
