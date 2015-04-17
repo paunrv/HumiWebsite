@@ -4,7 +4,7 @@ var express = require('express'),
 	morgan = require('morgan');
 
 //Se conecta con la base de datos Mongo :)
-mongoose.connect('mongodb://localhost/humi');
+mongoose.connect('mongodb://humiwebsite:abc123@ds061721.mongolab.com:61721/heroku_app35954043');
 
 //MODELS
 require('./models/grado');
