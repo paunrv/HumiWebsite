@@ -4,7 +4,7 @@ var mongoose = require('mongoose'),
 	router = express.Router(),
 	bodyParser = require('body-parser');
 
-router.post('/grado', bodyParser.json(),bodyParser.urlencoded({ extended: true }), function(req,res){
+router.post('/api/grado', bodyParser.json(),bodyParser.urlencoded({ extended: true }), function(req,res){
 	console.log(req.body);
 	var grado = new Grado(req.body);
 	grado.save(function(err){
@@ -18,7 +18,7 @@ router.post('/grado', bodyParser.json(),bodyParser.urlencoded({ extended: true }
 
 });
 
-router.get('/grados', bodyParser.json(),bodyParser.urlencoded({ extended: true }), function(req,res){
+router.get('/api/grados', bodyParser.json(),bodyParser.urlencoded({ extended: true }), function(req,res){
 	Grado.find(function(err, grados) {
 		if (err) {
 			res.status(500);
