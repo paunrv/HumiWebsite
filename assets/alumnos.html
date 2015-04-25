@@ -49,9 +49,9 @@
             <small></small>
         </div>
         <div class="section" ng-controller="AlumnoController">
-            <h1>{{alumnos | json}}</h1>
 			<div class="container">
                 <div class="col-md-3" ng-repeat="alumo in alumnos">
+                    <h1>{{alumno | json}}</h1>
                     <img ng-src="{{alumno.foto}}"
                     class="img-circle img-responsive">
                     <div class="row">
