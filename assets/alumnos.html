@@ -49,26 +49,23 @@
             <small></small>
         </div>
         <div class="section" ng-controller="AlumnoController">
-			<div class="container" ng-repeat="alumo in alumnos">
-
-	                    <div class="col-md-3">
-	                        <img ng-src="{{alumno.foto}}"
-	                        class="img-circle img-responsive">
-	                        <div class="row">
-	                            <div class="col-md-3">
-	                                <h3>{{alumno.nombre}} {{alumno.apellido}}</h3>
-	                                <div class="row">
-	                                    <div class="col-md-3"></div>
-	                                    <div class="col-md-3">
-	                                        <h4>{{alumno.grado.nombre}}</h4>
-	                                        <i class="fa fa-2x fa-fw fa-genderless text-danger"></i>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-
-            	<% } %>
+			<div class="container">
+                <div class="col-md-3" ng-repeat="alumo in alumnos">
+                    <img ng-src="{{alumno.foto}}"
+                    class="img-circle img-responsive">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h3>{{alumno.nombre}} {{alumno.apellido}}</h3>
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-3">
+                                    <h4>{{alumno.grado.nombre}}</h4>
+                                    <i class="fa fa-2x fa-fw fa-genderless text-danger"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
  			</div>
         </div>
         <div class="section" style="background-color: black;">
