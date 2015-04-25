@@ -12,4 +12,9 @@ router.get('/', function(req,res){
 	res.render('index');
 });
 
+router.get('/alumnos', function(req,res){
+	res.status(200);
+	res.render('alumnos');
+});
+
 module.exports = router;
