@@ -49,6 +49,7 @@
             <small></small>
         </div>
         <div class="section" ng-controller="AlumnoController">
+            <h1>{{alumnos | json}}</h1>
 			<div class="container">
                 <div class="col-md-3" ng-repeat="alumo in alumnos">
                     <img ng-src="{{alumno.foto}}"
@@ -85,9 +86,7 @@
                             <h1>Ubicación</h1>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <img class="img-responsive" src="https://maps.googleapis.com/maps/api/staticmap?center=31.8707056,-116.6372022&amp;zoom=15&amp;size=200x200&amp;sensor=false&amp;
-
-&amp;markers=color:blue|31.8707056,-116.6372022">
+                                    <img class="img-responsive" src="https://maps.googleapis.com/maps/api/staticmap?center=31.8707056,-116.6372022&amp;zoom=15&amp;size=200x200&amp;sensor=false&amp;&amp;markers=color:blue|31.8707056,-116.6372022">
                                 </div>
                                 <div class="col-md-3">
                                     <h4>Dirección</h4>
