@@ -3,8 +3,8 @@
 
 
 	app.controller('AlumnoController', ['$scope','$http' , function($scope,$http){
-		$http.get('api/alumnos').success(function(data)){
+		$http.get('api/alumnos').success(function(data){
 			$scope.alumnos = data;
-		}
+		});
 	}]);
 })();
