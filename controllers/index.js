@@ -7,9 +7,5 @@ var express = require('express'),
 router.use('/', require('./grado'))
 router.use('/', require('./alumno'))
 
-router.get('/', function(req,res){
-	res.status(200);
-	res.render('index');
-});
 
 module.exports = router;

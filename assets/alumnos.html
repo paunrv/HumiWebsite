@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="humi">
     
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+        <script type="text/javascript" src="js/humi.js"></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
         rel="stylesheet" type="text/css">
         <link href="https://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
@@ -46,28 +48,24 @@
             </div>
             <small></small>
         </div>
-        <div class="section">
+        <div class="section" ng-controller="AlumnoController">
 			<div class="container">
-            	<% for(var i=0; i<alumnos.length; i++) {%>
-
-	                    <div class="col-md-3">
-	                        <img src="<%=alumnos[i].foto%>"
-	                        class="img-circle img-responsive">
-	                        <div class="row">
-	                            <div class="col-md-3">
-	                                <h3><%=alumnos[i].nombre%> <%alumnos[i].apellido %></h3>
-	                                <div class="row">
-	                                    <div class="col-md-3"></div>
-	                                    <div class="col-md-3">
-	                                        <h4><%=alumnos[i].grado.nombre%></h4>
-	                                        <i class="fa fa-2x fa-fw fa-genderless text-danger"></i>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-
-            	<% } %>
+                <div class="col-md-3" ng-repeat="alumno in alumnos">
+                    <img ng-src="{{alumno.foto}}"
+                    class="img-circle img-responsive">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h3>{{alumno.nombre}} {{alumno.apellido}}</h3>
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-3">
+                                    <h4>{{alumno.grado.nombre}}</h4>
+                                    <i class="fa fa-2x fa-fw fa-genderless text-danger"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
  			</div>
         </div>
         <div class="section" style="background-color: black;">
@@ -87,9 +85,7 @@
                             <h1>Ubicación</h1>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <img class="img-responsive" src="https://maps.googleapis.com/maps/api/staticmap?center=31.8707056,-116.6372022&amp;zoom=15&amp;size=200x200&amp;sensor=false&amp;
-
-&amp;markers=color:blue|31.8707056,-116.6372022">
+                                    <img class="img-responsive" src="https://maps.googleapis.com/maps/api/staticmap?center=31.8707056,-116.6372022&amp;zoom=15&amp;size=200x200&amp;sensor=false&amp;&amp;markers=color:blue|31.8707056,-116.6372022">
                                 </div>
                                 <div class="col-md-3">
                                     <h4>Dirección</h4>
